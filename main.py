@@ -10,19 +10,19 @@ from tensorflow.keras.models import load_model
 from transformers import BertTokenizer
 
 
-text=['India calls off ban on imports of laptops, tablets and other other IT hardware']
-preprocess_path ="https://kaggle.com/models/tensorflow/bert/frameworks/TensorFlow2/variations/en-uncased-preprocess/versions/3"
-# tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+# text=['India calls off ban on imports of laptops, tablets and other other IT hardware']
+# preprocess_path ="https://kaggle.com/models/tensorflow/bert/frameworks/TensorFlow2/variations/en-uncased-preprocess/versions/3"
+# # tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 
-def preprocess_input(text):
-    preprocessor = hub.KerasLayer(preprocess_path)
-    encoder_inputs = preprocessor(text)
-    return encoder_inputs
+# def preprocess_input(text):
+#     preprocessor = hub.KerasLayer(preprocess_path)
+#     encoder_inputs = preprocessor(text)
+#     return encoder_inputs
 
-# preprocessed_input = preprocess_input(text)
-# print(preprocessed_input) 
+# # preprocessed_input = preprocess_input(text)
+# # print(preprocessed_input) 
 
-loaded_model = load_model("K:/BERT_model/bert_uncased") 
+# loaded_model = load_model("K:/BERT_model/bert_uncased") 
   
 
 def predict(text):
